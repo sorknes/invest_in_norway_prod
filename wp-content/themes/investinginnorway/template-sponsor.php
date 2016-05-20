@@ -9,7 +9,7 @@
         <main id="content" class="main" role="main">
 			<?php while (have_posts()) : the_post(); ?>
             <div class="section-title page">
-				<h2 itemprop="headline"><?php the_title(); ?></h2>
+				<h2 itemprop="headline"><?php the_title(); ?> - Test</h2>
 				<div itemprop="description">
 					<?php the_content(); ?>
 				</div>
