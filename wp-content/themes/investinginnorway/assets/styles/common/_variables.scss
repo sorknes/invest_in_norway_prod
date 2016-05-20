@@ -1,0 +1,19 @@
+@import "colors";
+@import "fonts";
+
+// Functions
+@import "functions/pxtoem";
+
+// Mixins
+@import "mixins/animations";
+
+// Variables
+@import "variables/breakpoints";
+@import "variables/heights";
+
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;

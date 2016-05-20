@@ -1,0 +1,190 @@
+.grid {
+    [class*="col-"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .grid-item {
+        margin-bottom: em(10px);
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover, a:focus {
+            color: $base-color;
+
+            .grid-item-container {
+                box-shadow: 0 0 20px $base-color-25;
+
+                h3 {
+                    color: $brand-color;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        h3 {
+            padding: 0;
+            margin: em(10px) 0 0 0;
+            position: relative;
+            display: block;
+
+            @include transition($default);
+
+            &::after {
+                width: 50px;
+                height: 1px;
+                content: '';
+                position: absolute;
+                bottom: -10px; left: 0;
+                background-color: $base-color-25;
+            }
+        }
+
+        p {
+            margin-top: em(30px);
+        }
+
+        &.sticky {
+            width: 100%;
+
+            a:hover, a:focus {
+                .grid-item-container {
+                    box-shadow: 0 0 20px $base-color-50;
+
+                    h3 {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .grid-item-container {
+                color: #fff;
+                background-color: $base-color;
+
+                .meta {
+                    background-image: url('../images/svg/icon-tag-grey.svg');
+
+                    small {
+                        color: rgba(#fff, .5);
+                    }
+                }
+
+                .grid-item-content {
+                    padding: em(30px);
+
+                    h3 {
+                        font-size: em(30px);
+
+                        &::after {
+                            background-color: rgba(#fff, .5);
+                        }
+                    }
+
+                    p {
+                        font-size: 110%;
+                    }
+
+                    .author {
+                        color: rgba(#fff, .5);
+
+                        &::before {
+                            background-color: rgba(#fff, .5)
+                        }
+                    }
+                }
+            }
+        }
+
+        .grid-item-container {
+            background-color: #fff;
+
+            @include transition($default);
+
+            .grid-item-content {
+                padding: em(20px);
+            }
+        }
+
+        .meta {
+            padding: 0 0 0 em(22px);
+            margin: 0;
+            line-height: 0;
+            background-position: left top;
+            background-repeat: no-repeat;
+            background-image: url('../images/svg/icon-tag.svg');
+            background-size: 12px 12px;
+
+            small {
+                color: $base-color;
+                font-family: $fixed-font-family;
+                font-size: $fixed-font-size;
+                text-transform: $fixed-text-transform;
+                letter-spacing: $fixed-letter-spacing;
+                line-height: em(24px);
+            }
+        }
+
+        .author {
+            padding: em(10px) 0 0 0;
+            margin-top: $header-lg-height / 2;
+            color: $brand-color;
+            font-family: $fixed-font-family;
+            font-size: $fixed-font-size;
+            text-transform: $fixed-text-transform;
+            letter-spacing: $fixed-letter-spacing;
+            text-transform: uppercase;
+            position: relative;
+
+            &::before {
+                width: 50px;
+                height: 1px;
+                content: '';
+                position: absolute;
+                top: -10px; left: 0;
+                background-color: $brand-color;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    .grid {
+        [class*="col-"] {
+            padding-left: em(5px);
+            padding-right: em(5px);
+        }
+
+        .grid-item {
+            &.sticky {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .grid {
+        .grid-item {
+            &.sticky {
+                width: 66.6666667%;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .grid {
+        .grid-item {
+            &.sticky {
+                width: 50%;
+            }
+        }
+    }
+}

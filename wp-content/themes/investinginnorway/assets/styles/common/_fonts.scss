@@ -1,0 +1,24 @@
+// Base Font weights
+$base-regular: 400;
+$base-bold: 700;
+
+// Header Font weights
+$header-regular: 300;
+$header-bold: 500;
+
+// Base Font
+$base-font-family: 'Alegreya', serif;
+$base-font-weight: $base-regular;
+$base-font-size: 1rem;
+$base-font-size-large: 1.250rem;
+$base-line-height: 1.5;
+
+// Header Font
+$header-font-family: 'Fira Sans', sans-serif;
+$header-font-weight: $header-bold;
+
+// Fixed Font (meta/small)
+$fixed-font-family: monospace;
+$fixed-font-size: .5rem;
+$fixed-letter-spacing: 2px;
+$fixed-text-transform: uppercase;

@@ -1,0 +1,14 @@
+@mixin transition($default) {
+    transition: all $default ease-in-out
+}
+
+@mixin bg-color($default) {
+    transition: background-color $default ease-in-out
+}
+
+// Transition timing
+$instant:   0ms;
+$fast:      200ms;
+$default:   300ms;
+$easy:      500ms;
+$slow:      800ms;
