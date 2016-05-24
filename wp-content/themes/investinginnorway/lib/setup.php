@@ -52,6 +52,11 @@ function setup() {
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
 /**
+ * Register Custom Navigation Walker
+ */
+require_once('wp_bootstrap_navwalker.php');
+
+/**
  * Register sidebars
  */
 function widgets_init() {
