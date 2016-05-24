@@ -86,13 +86,14 @@
         }
 
         &::before {
-            background-color: $base-color-10;
-            background-image: url('../images/svg/icon-close.svg');
+            background-color: $base-color;
+            background-image: url('../images/svg/icon-close-white.svg');
             background-size: 24px 24px;
         }
 
         &.collapsed:hover::before, &.collapsed:focus::before {
-            background-color: $base-color-10;
+            background-color: $base-color;
+            background-image: url('../images/svg/icon-search-white.svg');
         }
     }
 }
