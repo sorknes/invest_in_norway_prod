@@ -1,6 +1,6 @@
 .footer {
     width: 100%;
-    padding: em(30px) 0;
+    padding: em(30px) 0 em(20px) 0;
     margin-top: $header-sm-height / 2;
     text-align: center;
     color: #fff;
@@ -9,14 +9,31 @@
     font-weight: $header-regular;
     background-color: $base-color;
 
-    p.text-muted {
+    a {
         color: #fff;
+        text-decoration: none;
+
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    p.text-muted {
         margin: 0;
+        color: #fff;
     }
 }
 
 @media (min-width: $screen-sm-min) {
     .footer {
         margin-top: $header-lg-height / 2;
+
+        p.text-muted {
+            text-align: left;
+        }
+
+        .to-top {
+            text-align: right;
+        }
     }
 }
