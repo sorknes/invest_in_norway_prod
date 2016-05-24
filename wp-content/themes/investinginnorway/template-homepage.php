@@ -54,85 +54,87 @@
 wp_reset_postdata(); ?>
 
 <div class="container-fluid">
-    <div class="content row">
-        <main id="content" class="main" role="main">
-            <div class="section-title">
-                <?php
-    			$id = 65;
-    			$post = get_post($id);
-    			$title = apply_filters('the_title', $post->post_title);
-    			$content = apply_filters('the_content', $post->post_content);
+	<main id="content" class="main" role="main">
+    	<div class="content row">
+			<div class="col-xs-12">
+	            <div class="section-title">
+	                <?php
+	    			$id = 65;
+	    			$post = get_post($id);
+	    			$title = apply_filters('the_title', $post->post_title);
+	    			$content = apply_filters('the_content', $post->post_content);
 
-    			echo '<h2 itemprop="headline">'.$title.'</h2>'; //POST
-    			echo '<div itemprop="description">'.$content.'</div>';
+	    			echo '<h2 itemprop="headline">'.$title.'</h2>'; //POST
+	    			echo '<div itemprop="description">'.$content.'</div>';
 
-    			wp_reset_query();
-    			?>
-                <div class="row">
-                    <div class="col-xs-12">
-						<ul class="cat-list">
-							<?php wp_list_categories( array(
-								'child_of'  => 42,
-								'depth' 	=> 1,
-								'title_li'  => ''
-							) ); ?>
-						</ul>
-                    </div>
-                </div>
-            </div>
-        </main> <!-- /.main -->
-    </div> <!-- /.content -->
+	    			wp_reset_query();
+	    			?>
+	                <div class="row">
+	                    <div class="col-xs-12">
+							<ul class="cat-list">
+								<?php wp_list_categories( array(
+									'child_of'  => 42,
+									'depth' 	=> 1,
+									'title_li'  => ''
+								) ); ?>
+							</ul>
+	                    </div>
+	                </div>
+	            </div>
+			</div>
+    	</div> <!-- /.content -->
 
-	<div class="row">
-		<div class="col-xs-12 col-lg-10 col-lg-offset-1">
-			<div class="grid">
-				<div class="grid-sizer col-xs-2 col-sm-2 col-md-4 col-lg-3"></div>
-					<?php query_posts( array(
-						'cat'				=> 'show-on-homepage',
-						'posts_per_page'	=> 12,
-						'order' 			=> 'DESC',
-						'depth'				=> 3
-					) ); ?>
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-						<div <?php post_class('grid-item col-xs-12 col-sm-6 col-md-4 col-lg-3'); ?>>
-							<a itemprop="url" href="<?php the_permalink(); ?>" title="Read more: <?php the_title(); ?>">
-								<div class="grid-item-container">
-									<figure>
-										<?php the_post_thumbnail('large'); ?>
-									</figure>
-									<div class="grid-item-content">
-										<div class="meta">
-											<small>
-												<?php
-													$categories = get_the_category();
-													$separator = ' / ';
-													$output = '';
+		<div class="content row">
+			<div class="col-xs-12 col-lg-10 col-lg-offset-1">
+				<div class="grid">
+					<div class="grid-sizer col-xs-2 col-sm-2 col-md-4 col-lg-3"></div>
+						<?php query_posts( array(
+							'cat'				=> 'show-on-homepage',
+							'posts_per_page'	=> 12,
+							'order' 			=> 'DESC',
+							'depth'				=> 3
+						) ); ?>
+						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+							<div <?php post_class('grid-item col-xs-12 col-sm-6 col-md-4 col-lg-3'); ?>>
+								<a itemprop="url" href="<?php the_permalink(); ?>" title="Read more: <?php the_title(); ?>">
+									<article class="grid-item-container">
+										<figure>
+											<?php the_post_thumbnail('large'); ?>
+										</figure>
+										<div class="grid-item-content">
+											<div class="meta">
+												<small>
+													<?php
+														$categories = get_the_category();
+														$separator = ' / ';
+														$output = '';
 
-													if($categories){
-														foreach($categories as $category) {
-															if($category->name !== '_Show on homepage'){
-	        													$output .= ''.$category->cat_name.''.$separator;
-															}
-	    												}
+														if($categories){
+															foreach($categories as $category) {
+																if($category->name !== '_Show on homepage'){
+		        													$output .= ''.$category->cat_name.''.$separator;
+																}
+		    												}
 
-													echo trim($output, $separator);
-													}
-												?>
-											</small>
-										</div> <!-- /.meta -->
-										<h3 itemprop="headline"><?php the_title(); ?></h3>
-										<?php the_excerpt(); ?>
-										<div class="author">
-											Author: <?php the_author() ?>
-										</div> <!-- /.author -->
-									</div>
-								</div> <!-- /.grid-item-content -->
-							</a>
-						</div> <!-- /.grid-item -->
-					<?php endwhile; endif;
+														echo trim($output, $separator);
+														}
+													?>
+												</small>
+											</div> <!-- /.meta -->
+											<h3 itemprop="headline"><?php the_title(); ?></h3>
+											<?php the_excerpt(); ?>
+											<div class="author">
+												Author: <?php the_author() ?>
+											</div> <!-- /.author -->
+										</div> <!-- /.grid-item-content -->
+									</article> <!-- /.grid-item-container -->
+								</a>
+							</div> <!-- /.grid-item -->
+						<?php endwhile; endif;
 
-					wp_reset_query(); ?>
-			</div> <!-- /.grid -->
-		</div> <!-- /.col-lg-offeset -->
-	</div> <!-- /.row -->
+						wp_reset_query(); ?>
+				</div> <!-- /.grid -->
+			</div> <!-- /.col-lg-offeset -->
+		</div> <!-- /.row -->
+	</main> <!-- /.main -->
 </div> <!-- /.container-fluid -->

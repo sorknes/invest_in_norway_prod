@@ -5,16 +5,40 @@
 ?>
 
 <div class="container-fluid">
-    <div class="content row">
-        <main id="content" class="main" role="main">
-			<?php while (have_posts()) : the_post(); ?>
-            <div class="section-title page">
-				<h2 itemprop="headline"><?php the_title(); ?></h2>
-				<div itemprop="description">
-					<?php the_content(); ?>
-				</div>
-            </div>
-			<?php endwhile; ?>
-        </main> <!-- /.main -->
-    </div> <!-- /.content -->
+	<main id="content" class="main" role="main">
+    	<div class="content row">
+            <div class="col-xs-12">
+                <?php while (have_posts()) : the_post(); ?>
+                <div class="section-title page">
+    				<h1 itemprop="headline"><?php the_title(); ?></h1>
+    				<div itemprop="description">
+    					<?php the_content(); ?>
+    				</div>
+                </div>
+    			<?php endwhile; ?>
+            </div> <!-- /.col -->
+        </div> <!-- /.content -->
+        <div class="content row">
+            <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+                <div class="grid sponsor clearfix">
+                <?php
+                    $args = array( 'post_type' => 'sponsor', 'posts_per_page' => 10 );
+                    $loop = new WP_Query( $args );
+
+                    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+                    <div class="col-xs-6 col-sm-4 col-md-3 container">
+                        <article class="content">
+                            <figure data-toggle="tooltip" data-placement="top" title="<?php the_title(); ?>">
+                                <?php the_post_thumbnail('medium'); ?>
+                            </figure>
+                        </article>
+                    </div>
+                    <?php endwhile;
+
+                    wp_reset_query(); ?>
+                </div> <!-- /.grid -->
+            </div> <!-- /.col -->
+        </div> <!-- /.content -->
+    </main> <!-- /.main -->
 </div> <!-- /.container-fluid -->
