@@ -113,8 +113,8 @@
         // JavaScript to be fired on the sponsor page
         // tooltip
         $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
+            $('[data-toggle="tooltip"]').tooltip();
+        });
       }
     }
   };
