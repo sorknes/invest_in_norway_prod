@@ -1,3 +1,19 @@
+/* Tooltip */
+.tooltip > .tooltip-inner {
+    padding: em(12px) em(20px) em(10px) em(20px);
+    font-size: .75rem;
+    font-family: $header-font-family;
+    font-weight: $header-regular;
+    text-transform: uppercase;
+    border-radius: 0;
+    background-color: $base-color;
+}
+
+/* Tooltip on top */
+.tooltip.top > .tooltip-arrow {
+    border-top-color: $base-color;
+}
+
 .grid {
     &.sponsor {
         [class*="col-"] {
