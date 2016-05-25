@@ -94,6 +94,7 @@ function display_sidebar() {
     is_page_template('template-custom.php'),
     is_page_template('template-sponsor.php'),
     is_page_template('template-contact.php'),
+    is_page_template('template-about.php'),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

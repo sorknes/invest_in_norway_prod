@@ -9,12 +9,10 @@
     	<div class="content row">
             <div class="col-xs-12">
                 <?php while (have_posts()) : the_post(); ?>
-                <div class="section-title page">
-    				<h1 itemprop="headline"><?php the_title(); ?></h1>
-    				<div itemprop="description">
-    					<?php the_content(); ?>
-    				</div>
-                </div>
+				<article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
+					<?php get_template_part('templates/page', 'header'); ?>
+					<?php get_template_part('templates/content', 'page'); ?>
+				</article>
     			<?php endwhile; ?>
             </div> <!-- /.col -->
         </div> <!-- /.content -->

@@ -38,8 +38,8 @@
             @include transition($default);
 
             &::after {
-                width: 50px;
-                height: 1px;
+                width: 75px;
+                height: 2px;
                 content: '';
                 position: absolute;
                 bottom: -10px; left: 0;

@@ -35,6 +35,8 @@ a {
 
 // Typography
 h1, h2, h3, h4, h5, h6 {
+    margin-top: em(20px);
+    margin-bottom: em(5em);
     font-family: $header-font-family;
     font-weight: $header-font-weight;
 }
@@ -67,26 +69,17 @@ h6 {
     font-size: em(12px);
 }
 
-small {
-    font-size: 80%;
+p {
+    margin-bottom: em(15px);
 }
 
-.section-title {
-    padding-bottom: em(10px);
-    margin: $header-sm-height auto 0 auto;
-    text-align: center;
-    font-size: em(18px);
-    border-bottom: 1px solid $base-color-25;
+small {
+    font-size: 80%;
 }
 
 @media (min-width: $screen-sm-min) {
     small {
         font-size: 85%;
-    }
-
-    .section-title {
-        width: 75%;
-        margin-top: $header-lg-height;
     }
 }
 

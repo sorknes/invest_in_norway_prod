@@ -41,3 +41,11 @@ function edit_admin_menus() {
     $menu[5][0] = 'Industries';
 }
 add_action( 'admin_menu', __NAMESPACE__ . '\\edit_admin_menus' );
+
+/**
+ * Add excerpt to pages
+ */
+function my_add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'init', __NAMESPACE__ . '\\my_add_excerpts_to_pages' );

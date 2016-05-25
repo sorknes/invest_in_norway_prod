@@ -57,32 +57,33 @@ wp_reset_postdata(); ?>
 	<main id="content" class="main" role="main">
     	<div class="content row">
 			<div class="col-xs-12">
-	            <div class="section-title">
+	            <div class="page-header">
 	                <?php
 	    			$id = 65;
 	    			$post = get_post($id);
 	    			$title = apply_filters('the_title', $post->post_title);
 	    			$content = apply_filters('the_content', $post->post_content);
 
-	    			echo '<h2 itemprop="headline">'.$title.'</h2>'; //POST
+	    			echo '<h2 class="section-title" itemprop="headline">'.$title.'</h2>'; //POST
 	    			echo '<div itemprop="description">'.$content.'</div>';
 
 	    			wp_reset_query();
 	    			?>
-	                <div class="row">
-	                    <div class="col-xs-12">
-							<ul class="cat-list">
-								<?php wp_list_categories( array(
-									'child_of'  => 42,
-									'depth' 	=> 1,
-									'title_li'  => ''
-								) ); ?>
-							</ul>
-	                    </div>
-	                </div>
 	            </div>
 			</div>
     	</div> <!-- /.content -->
+
+		<div class="content row">
+			<div class="col-xs-12 col-lg-10 col-lg-offset-1">
+				<ul class="cat-list">
+					<?php wp_list_categories( array(
+						'child_of'  => 42,
+						'depth' 	=> 1,
+						'title_li'  => ''
+					) ); ?>
+				</ul>
+			</div>
+		</div>
 
 		<div class="content row">
 			<div class="col-xs-12 col-lg-10 col-lg-offset-1">
