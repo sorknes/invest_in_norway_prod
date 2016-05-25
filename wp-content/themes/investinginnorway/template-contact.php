@@ -18,3 +18,5 @@
         </div> <!-- /.content -->
     </main> <!-- /.main -->
 </div> <!-- /.container-fluid -->
+
+<div id="map"></div>
