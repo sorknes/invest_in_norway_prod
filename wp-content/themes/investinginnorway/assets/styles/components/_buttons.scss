@@ -139,7 +139,7 @@
         }
 
             &:hover .icon-bar, &:focus .icon-bar {
-                background-color: #fff;
+                background-color: $brand-color;
             }
 
         &.collapsed {
@@ -147,7 +147,7 @@
         }
 
         &:hover, &:focus {
-            background-color: $base-color;
+            background-color: #fff;
         }
     }
 }

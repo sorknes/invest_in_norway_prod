@@ -59,18 +59,18 @@ header {
         .navbar-collapse {
             border-top: none;
             box-shadow: none;
-            background-color: $base-color;
+            background-color: #fff;
 
             .navbar-nav {
                 margin: 0 em(20px);
 
                 & > li > a {
                     padding: em(15px) em(30px);
-                    color: #fff;
+                    color: $base-color;
                     font-size: em(12px);
                     font-weight: $base-bold;
                     letter-spacing: 1px;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+                    border-bottom: 1px solid $base-color-10;
 
                     &:hover, &:focus {
                         color: $brand-color;
@@ -124,10 +124,10 @@ header {
 
                     & > li > a {
                         padding: em(10px) em(50px);
-                        color: rgba(255, 255, 255, 0.5);
+                        color: $base-color;
                         font-size: em(14px);
                         font-weight: $header-regular;
-                        border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+                        border-bottom: 1px dashed $base-color-10;
 
                         &:hover, &:focus {
                             color: #fff;
@@ -154,7 +154,7 @@ header {
                                 content: '';
                                 position: absolute;
                                 top: 50%;
-                                border-top: 4px solid #fff;
+                                border-top: 4px solid $base-color;
                                 border-right: 4px solid transparent;
                                 border-left: 4px solid transparent;
 
