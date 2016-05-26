@@ -74,22 +74,69 @@
 }
 
 // Media alignment
-.alignnone {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100%;
-    height: auto;
+.entry-content img {
+    margin: 0 0 1.5em;
 }
 
-.aligncenter {
-    display: block;
-    margin: ($line-height-computed / 2) auto;
-    height: auto;
-}
 .alignleft,
-.alignright {
-    margin-bottom: ($line-height-computed / 2);
-    height: auto;
+img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+}
+
+.alignright,
+img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+}
+
+.aligncenter,
+img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+}
+
+.alignnone,
+img.alignnone {
+  /* not sure about this one */
+}
+
+// Blockqoute
+blockquote {
+    color: $base-color-75;
+    font-size: 1.250rem;
+    border-left-color: $accent-color;
+}
+
+// Thumbnails & captions
+.thumbnail, .wp-caption {
+    padding: 0;
+    margin-bottom: em(20px);
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.wp-caption {
+    font-size: 1rem;
+    line-height: 1;
+    border-bottom: 1px solid $base-color-50;
+
+    .wp-caption-text {
+        padding: 0;
+        color: $base-color-50;
+        font-family: $fixed-font-family;
+    }
+}
+
+// Other
+.wp-smiley {
+    margin: 0 !important;
+    max-height: 1em;
 }
 
 @media (min-width: $screen-sm-min) {

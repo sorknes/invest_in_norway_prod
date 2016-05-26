@@ -55,24 +55,3 @@
         }
     }
 }
-
-@media (min-width: $screen-sm-min) {
-    .meta {
-        text-align: left;
-
-        .meta-entry {
-            display: inline-block;
-        }
-
-        small {
-            .author {
-                margin-left: em(10px);
-                border-left: 1px solid $base-color-50;
-            }
-
-            .category {
-
-            }
-        }
-    }
-}

@@ -9,6 +9,9 @@
             </div>
         </header>
         <div id="entry" class="container" itemprop="description">
+            <figure class="thumbnail">
+                <?php the_post_thumbnail('large'); ?>
+            </figure>
             <div class="entry-content">
                 <?php the_content(); ?>
             </div>
