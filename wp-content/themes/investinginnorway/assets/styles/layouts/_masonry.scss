@@ -69,7 +69,9 @@
                 background-color: $base-color;
 
                 .meta {
-                    background-image: url('../images/svg/icon-tag-grey.svg');
+                    .category {
+                        background-image: url('../images/svg/icon-tag-grey.svg');
+                    }
 
                     small {
                         color: rgba(#fff, .5);
