@@ -46,6 +46,14 @@
             line-height: .75;
             float: left;
         }
+
+        img {
+            &.size-large, &.size-full {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
     }
 
     .thumbnail > img {
