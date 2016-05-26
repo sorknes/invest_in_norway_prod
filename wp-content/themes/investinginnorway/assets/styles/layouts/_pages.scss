@@ -1,17 +1,17 @@
 .page-header {
     width: 90%;
-    padding-bottom: em(10px);
+    padding: 0;
     margin-left: auto;
     margin-top: $header-sm-height;
-    margin-bottom: $header-sm-height / 2;
+    margin-bottom: $header-sm-height;
     margin-right: auto;
     text-align: center;
     font-size: em(18px);
     position: relative;
-    border-bottom: 1px solid $base-color-25;
+    border: none;
 
     &.page {
-        margin-top: $header-sm-height * 2;
+        margin-top: $header-sm-height * 1.5;
     }
 }
 
@@ -26,12 +26,14 @@
 @media (min-width: $screen-sm-min) {
     .page-header {
         width: 75%;
-        margin-top: $header-lg-height;
-        // margin-bottom: $header-lg-height / 2;
         font-size: 1.125rem;
 
+        &::after {
+            bottom: em(-25px);
+        }
+
         &.page {
-            margin-top: $header-lg-height * 2;
+            margin-top: $header-lg-height * 1.5;
         }
     }
 

@@ -59,7 +59,7 @@
                     box-shadow: 0 0 20px $base-color-50;
 
                     h3 {
-                        color: #fff;
+                        color: $accent-color;
                     }
                 }
             }
@@ -92,10 +92,10 @@
                     }
 
                     .author {
-                        color: rgba(#fff, .5);
+                        color: $accent-color;
 
                         &::before {
-                            background-color: rgba(#fff, .5)
+                            background-color: $accent-color;
                         }
                     }
                 }
@@ -109,25 +109,6 @@
 
             .grid-item-content {
                 padding: em(20px);
-            }
-        }
-
-        .meta {
-            padding: 0 0 0 em(22px);
-            margin: 0;
-            line-height: 0;
-            background-position: left top;
-            background-repeat: no-repeat;
-            background-image: url('../images/svg/icon-tag.svg');
-            background-size: 12px 12px;
-
-            small {
-                color: $base-color;
-                font-family: $fixed-font-family;
-                font-size: $fixed-font-size;
-                text-transform: $fixed-text-transform;
-                letter-spacing: $fixed-letter-spacing;
-                line-height: em(24px);
             }
         }
 

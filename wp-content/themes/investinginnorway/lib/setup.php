@@ -92,6 +92,7 @@ function display_sidebar() {
     is_404(),
     is_front_page(),
     is_page(),
+    is_single(),
     // is_page_template('template-custom.php'),
     // is_page_template('template-sponsor.php'),
     // is_page_template('template-contact.php'),
@@ -122,7 +123,7 @@ function assets() {
         wp_enqueue_script('isotope');
     }
 
-    if (is_page('contact')) {	  
+    if (is_page('contact')) {
         wp_register_script(
           'googlemap',
           'https://maps.googleapis.com/maps/api/js?key=AIzaSyB3LNFg3pfQOSfXIJG9C7yjelt555uq-7c&callback=initMap',

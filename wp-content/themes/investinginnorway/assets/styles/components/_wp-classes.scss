@@ -4,7 +4,7 @@
 // List category
 .cat-list {
     padding: 0;
-    margin-top: $header-sm-height / 2;
+    // margin-top: $header-sm-height / 2;
     margin-bottom: $header-sm-height / 2;
     margin-left: auto;
     margin-right: auto;
@@ -95,7 +95,7 @@
 @media (min-width: $screen-sm-min) {
     // List category
     .cat-list {
-        margin-top: $header-lg-height / 2;
+        // margin-top: $header-lg-height / 2;
         margin-bottom: $header-lg-height / 2;
 
         li {

@@ -105,21 +105,23 @@ wp_reset_postdata(); ?>
 										<div class="grid-item-content">
 											<div class="meta">
 												<small>
-													<?php
-														$categories = get_the_category();
-														$separator = ' / ';
-														$output = '';
+													<div class="category">
+														<?php
+															$categories = get_the_category();
+															$separator = ' / ';
+															$output = '';
 
-														if($categories){
-															foreach($categories as $category) {
-																if($category->name !== '_Show on homepage'){
-		        													$output .= ''.$category->cat_name.''.$separator;
-																}
-		    												}
+															if($categories){
+																foreach($categories as $category) {
+																	if($category->name !== '_Show on homepage'){
+			        													$output .= ''.$category->cat_name.''.$separator;
+																	}
+			    												}
 
-														echo trim($output, $separator);
-														}
-													?>
+															echo trim($output, $separator);
+															}
+														?>
+													</div>
 												</small>
 											</div> <!-- /.meta -->
 											<h3 itemprop="headline"><?php the_title(); ?></h3>

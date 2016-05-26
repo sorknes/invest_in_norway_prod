@@ -1,17 +1,26 @@
 .post {
+    .entry-title {
+        &::after {
+            width: 200px;
+            height: 4px;
+            margin-left: -100px;
+            content: '';
+            position: absolute;
+            bottom: em(-27px); left: 50%;
+            background-color: $brand-color;
+        }
+    }
+
     .entry-ingress {
         width: 90%;
-        // padding-bottom: $header-sm-height;
-        margin-top: $header-sm-height * 1.5;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: $header-sm-height;
+        margin-bottom: $header-sm-height - 5px;
         color: $base-color;
         text-align: center;
         font-size: 1.250rem;
         font-weight: $base-bold;
         position: relative;
-        // border-bottom: 1px solid $base-color-25;
 
         &::after {
             width: 200px;
@@ -19,7 +28,7 @@
             margin-left: -100px;
             content: '';
             position: absolute;
-            bottom: em(-25px); left: 50%;
+            bottom: em(-20px); left: 50%;
             background-color: $brand-color;
         }
     }
@@ -43,29 +52,28 @@
 @media (min-width: $screen-sm-min) {
     .post {
         .entry-ingress {
-            margin-top: $header-lg-height * 1.5;
-            margin-bottom: $header-lg-height;
+            margin-bottom: $header-lg-height - 30px;
             font-size: 1.5rem;
 
             &::after {
-                bottom: em(-30px);
+                bottom: em(-25px);
             }
         }
 
         .entry-content {
-            width: 80%
+            width: 80%;
         }
     }
 }
 
-@media (min-width: $screen-md-min) {
+@media (min-width: $screen-lg-min) {
     .post {
         .entry-ingress {
             width: 60%;
         }
 
         .entry-content {
-            width: 60%
+            width: 60%;
         }
     }
 }
