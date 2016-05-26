@@ -1,6 +1,8 @@
 <?php while (have_posts()) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
-    <?php get_template_part('templates/page', 'header'); ?>
+    <div class="sr-only">
+        <?php get_template_part('templates/page', 'header'); ?>
+    </div>
     <?php get_template_part('templates/content', 'page'); ?>
 </article>
 <?php endwhile; ?>

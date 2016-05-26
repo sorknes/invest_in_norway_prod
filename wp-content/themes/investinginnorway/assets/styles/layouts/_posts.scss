@@ -2,9 +2,10 @@
     .entry-ingress {
         width: 90%;
         // padding-bottom: $header-sm-height;
+        margin-top: $header-sm-height * 1.5;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: $header-lg-height;
+        margin-bottom: $header-sm-height;
         color: $base-color;
         text-align: center;
         font-size: 1.250rem;
@@ -18,7 +19,7 @@
             margin-left: -100px;
             content: '';
             position: absolute;
-            bottom: em(-30px); left: 50%;
+            bottom: em(-25px); left: 50%;
             background-color: $brand-color;
         }
     }
@@ -42,7 +43,13 @@
 @media (min-width: $screen-sm-min) {
     .post {
         .entry-ingress {
+            margin-top: $header-lg-height * 1.5;
+            margin-bottom: $header-lg-height;
             font-size: 1.5rem;
+
+            &::after {
+                bottom: em(-30px);
+            }
         }
 
         .entry-content {
