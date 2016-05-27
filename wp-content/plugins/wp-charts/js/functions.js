@@ -1,4 +1,3 @@
-
 jQuery(document).ready(function($) {
     // new Chart(document.getElementById("mypie").getContext("2d")).Pie(mypieData,mypieOps);
 

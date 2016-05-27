@@ -7,9 +7,16 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "3.3.6"
+    "bootstrap-sass": "3.3.6",
+    "waypoints": "^4.0.0"
   },
   "overrides": {
+    "waypoints": {
+      "main": [
+        "./lib/jquery.waypoints.js",
+        "./lib/shortcuts/inview.js"
+      ]
+    },
     "bootstrap-sass": {
       "main": [
         "./assets/stylesheets/_bootstrap.scss",
