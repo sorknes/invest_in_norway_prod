@@ -1,7 +1,38 @@
 .entry-content {
-    &.sponsor-list {
-        margin-bottom: em(25px);
-        border-bottom: 1px solid $base-color-10;
+    &.sponsor {
+        &.list {
+            margin-bottom: em(25px);
+            border-bottom: 1px solid $base-color-10;
+
+            p {
+                margin-top: em(20px);
+            }
+
+            h3 {
+                position: relative;
+
+                @include transition($default);
+
+
+                &::after {
+                    width: 75px;
+                    height: 2px;
+                    content: '';
+                    position: absolute;
+                    bottom: -10px; left: 0;
+                    background-color: $base-color-25;
+                }
+
+            }
+
+            a:hover, a:focus {
+                color: $base-color;
+
+                h3 {
+                    color: $brand-color;
+                }
+            }
+        }
 
         img {
             width: 100%;
@@ -9,37 +40,35 @@
             height: auto;
         }
 
-        h3 {
-            position: relative;
-
-            @include transition($default);
-
-
-            &::after {
-                width: 75px;
-                height: 2px;
-                content: '';
-                position: absolute;
-                bottom: -10px; left: 0;
-                background-color: $base-color-25;
-            }
-
-        }
-
-        a:hover, a:focus {
-            color: $base-color;
-
-            h3 {
-                color: $brand-color;
-            }
-        }
-
-        p {
-            margin-top: em(20px);
-        }
-
         .meta {
             margin-top: em(20px);
+        }
+
+        .contact {
+            h2 {
+                position: relative;
+
+                &::after {
+                    width: 75px;
+                    height: 2px;
+                    content: '';
+                    position: absolute;
+                    bottom: -10px; left: 0;
+                    background-color: $base-color-25;
+                }
+
+            }
+
+            .meta-entry {
+                padding-bottom: em(20px);
+                margin-top: em(20px);
+                border-bottom: 1px solid $base-color-10;
+
+                &:last-child {
+                    padding-bottom: 0;
+                    border: none;
+                }
+            }
         }
     }
 }

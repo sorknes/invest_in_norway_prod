@@ -54,7 +54,7 @@
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
 						<div id="entry" class="container" itemprop="description">
-							<div class="entry-content sponsor-list">
+							<div class="entry-content sponsor list">
 								<a href="<?php the_permalink(); ?>" itemprop="url" title="Learn more about: <?php the_title(); ?>">
 									<div class="row">
 										<div class="col-xs-12 col-sm-4">
@@ -122,7 +122,7 @@
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
 						<div id="entry" class="container" itemprop="description">
-							<div class="entry-content sponsor-list">
+							<div class="entry-content sponsor list">
 								<a href="<?php the_permalink(); ?>" itemprop="url" title="Learn more about: <?php the_title(); ?>">
 									<div class="row">
 										<div class="col-xs-12 col-sm-4">
@@ -190,7 +190,7 @@
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
 						<div id="entry" class="container" itemprop="description">
-							<div class="entry-content sponsor-list">
+							<div class="entry-content sponsor list">
 								<a href="<?php the_permalink(); ?>" itemprop="url" title="Learn more about: <?php the_title(); ?>">
 									<div class="row">
 										<div class="col-xs-12 col-sm-4">
