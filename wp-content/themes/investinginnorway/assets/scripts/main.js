@@ -108,15 +108,6 @@
         // JavaScript to be fired on the about us page
       }
     },
-    'sponsors': {
-      init: function() {
-        // JavaScript to be fired on the sponsor page
-        // tooltip
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-      }
-    }
   };
 
   // The routing fires all common scripts, followed by the page specific scripts.

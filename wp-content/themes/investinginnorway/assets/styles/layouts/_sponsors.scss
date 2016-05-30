@@ -1,149 +1,180 @@
-/* Tooltip */
-.tooltip > .tooltip-inner {
-    padding: em(12px) em(20px) em(10px) em(20px);
-    font-size: .75rem;
-    font-family: $header-font-family;
-    font-weight: $header-regular;
-    text-transform: uppercase;
-    border-radius: 0;
-    background-color: $base-color;
-}
+.entry-content {
+    &.sponsor-list {
+        margin-bottom: em(25px);
+        border-bottom: 1px solid $base-color-10;
 
-/* Tooltip on top */
-.tooltip.top > .tooltip-arrow {
-    border-top-color: $base-color;
-}
-
-.grid {
-    &.sponsor {
-        [class*="col-"] {
-            padding-left: 0;
-            padding-right: 0;
+        img {
+            width: 100%;
+            max-height: 100%;
+            height: auto;
         }
 
-        .container {
-            text-align: center;
+        h3 {
             position: relative;
 
-            &:nth-child(-n+2) {
-                .content {
-                    &::before {
-                        display: none;
-                    }
-                }
+            @include transition($default);
+
+
+            &::after {
+                width: 75px;
+                height: 2px;
+                content: '';
+                position: absolute;
+                bottom: -10px; left: 0;
+                background-color: $base-color-25;
             }
 
-            &:nth-child(2n+1) {
-                .content {
-                    &::after {
-                        display: none;
-                    }
-                }
+        }
+
+        a:hover, a:focus {
+            color: $base-color;
+
+            h3 {
+                color: $brand-color;
             }
+        }
 
-            .content {
-                padding: em(20px);
-                position: relative;
+        p {
+            margin-top: em(20px);
+        }
 
-                &::before {
-                    width: auto;
-                    height: 1px;
-                    content: '';
-                    position: absolute;
-                    top: -5px; right: em(10px); left: em(10px);
-                    background-color: $base-color-10;
-                }
-
-                &::after {
-                    width: 1px;
-                    height: auto;
-                    content: '';
-                    position: absolute;
-                    top: em(10px); bottom: em(10px); left: 0;
-                    background-color: $base-color-10;
-                }
-
-                img {
-                    width: 100%;
-                    max-width: 100%;
-                    height: auto;
-                }
-            }
+        .meta {
+            margin-top: em(20px);
         }
     }
 }
 
-@media (min-width: $screen-sm-min) {
-    .grid {
-        &.sponsor {
-            padding-left: em(5px);
-            padding-right: em(5px);
 
-            [class*="col-"] {
-                margin-bottom: em(10px);
-            }
-
-            .container {
-                .content {
-                    padding: em(40px);
-                }
-
-                &:nth-child(-n+3) {
-                    .content {
-                        &::before {
-                            display: none;
-                        }
-                    }
-                }
-
-                &:nth-child(2n+1) {
-                    .content {
-                        &::after {
-                            display: block;
-                        }
-                    }
-                }
-
-                &:nth-child(3n+1) {
-                    .content {
-                        &::after {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: $screen-md-min) {
-    .grid {
-        &.sponsor {
-            .container {
-                &:nth-child(-n+4) {
-                    .content {
-                        &::before {
-                            display: none;
-                        }
-                    }
-                }
-
-                &:nth-child(3n+1) {
-                    .content {
-                        &::after {
-                            display: block;
-                        }
-                    }
-                }
-
-                &:nth-child(4n+1) {
-                    .content {
-                        &::after {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+// .grid {
+//     &.sponsor {
+//         [class*="col-"] {
+//             padding-left: 0;
+//             padding-right: 0;
+//         }
+//
+//         .container {
+//             text-align: center;
+//             position: relative;
+//
+//             &:nth-child(-n+2) {
+//                 .content {
+//                     &::before {
+//                         display: none;
+//                     }
+//                 }
+//             }
+//
+//             &:nth-child(2n+1) {
+//                 .content {
+//                     &::after {
+//                         display: none;
+//                     }
+//                 }
+//             }
+//
+//             .content {
+//                 padding: em(20px);
+//                 position: relative;
+//
+//                 &::before {
+//                     width: auto;
+//                     height: 1px;
+//                     content: '';
+//                     position: absolute;
+//                     top: -5px; right: em(10px); left: em(10px);
+//                     background-color: $base-color-10;
+//                 }
+//
+//                 &::after {
+//                     width: 1px;
+//                     height: auto;
+//                     content: '';
+//                     position: absolute;
+//                     top: em(10px); bottom: em(10px); left: 0;
+//                     background-color: $base-color-10;
+//                 }
+//
+//                 img {
+//                     width: 100%;
+//                     max-width: 100%;
+//                     height: auto;
+//                 }
+//             }
+//         }
+//     }
+// }
+//
+// @media (min-width: $screen-sm-min) {
+//     .grid {
+//         &.sponsor {
+//             padding-left: em(5px);
+//             padding-right: em(5px);
+//
+//             [class*="col-"] {
+//                 margin-bottom: em(10px);
+//             }
+//
+//             .container {
+//                 .content {
+//                     padding: em(40px);
+//                 }
+//
+//                 &:nth-child(-n+3) {
+//                     .content {
+//                         &::before {
+//                             display: none;
+//                         }
+//                     }
+//                 }
+//
+//                 &:nth-child(2n+1) {
+//                     .content {
+//                         &::after {
+//                             display: block;
+//                         }
+//                     }
+//                 }
+//
+//                 &:nth-child(3n+1) {
+//                     .content {
+//                         &::after {
+//                             display: none;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+//
+// @media (min-width: $screen-md-min) {
+//     .grid {
+//         &.sponsor {
+//             .container {
+//                 &:nth-child(-n+4) {
+//                     .content {
+//                         &::before {
+//                             display: none;
+//                         }
+//                     }
+//                 }
+//
+//                 &:nth-child(3n+1) {
+//                     .content {
+//                         &::after {
+//                             display: block;
+//                         }
+//                     }
+//                 }
+//
+//                 &:nth-child(4n+1) {
+//                     .content {
+//                         &::after {
+//                             display: none;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
