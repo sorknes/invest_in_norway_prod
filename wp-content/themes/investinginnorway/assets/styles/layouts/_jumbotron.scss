@@ -36,7 +36,8 @@
         display: flex;
         align-items: center;
         border-radius: 0;
-        background-color: $brand-color-50;
+        // background-color: $brand-color-50;
+        background-color: transparent;
 
         .content {
             padding: em(20px) em(20px) em(40px);
@@ -134,9 +135,11 @@
         height: 75%;
 
         .jumbotron {
+            padding-top: em(100px);
+
             .content {
-                padding: em(40px) em(20px) em(60px);
-            }            
+                padding: 0 em(20px) em(60px);
+            }
 
             h1 {
                 font-size: em(36px);

@@ -93,6 +93,7 @@ function display_sidebar() {
     is_front_page(),
     is_page(),
     is_single(),
+    is_category(),
     // is_page_template('template-custom.php'),
     // is_page_template('template-sponsor.php'),
     // is_page_template('template-contact.php'),
@@ -111,7 +112,19 @@ function assets() {
         wp_enqueue_script('comment-reply');
     }
 
-    if ( is_front_page() ) {
+    if (is_front_page()) {
+        wp_register_script(
+            'isotope',
+            '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js',
+            array('jquery'),
+            null,
+            true
+        );
+
+        wp_enqueue_script('isotope');
+    }
+
+    if (is_category()) {
         wp_register_script(
             'isotope',
             '//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js',

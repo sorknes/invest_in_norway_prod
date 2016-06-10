@@ -102,6 +102,27 @@
         // JavaScript to be fired on the home page, after the init JS
       }
     },
+    // Resources page
+    'category': {
+      init: function() {
+        // JavaScript to be fired on the home page
+        // Isotope
+		$(window).load(function(){
+			$('.grid').isotope();
+		});
+
+		$('.grid').isotope({
+			itemSelector: '.grid-item',
+			percentPosition: true,
+			masonry: {
+				columnWidth: '.grid-sizer'
+			}
+		});
+      },
+      finalize: function() {
+        // JavaScript to be fired on the home page, after the init JS
+      }
+    },
     // About us page, note the change from about-us to about_us.
     'about_us': {
       init: function() {
