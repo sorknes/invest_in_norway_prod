@@ -19,7 +19,7 @@
         </div>
         <div class="meta-entry">
             <div class="author">
-                <?= __('By', 'sage'); ?> <a href="<?= get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="fn"><?= get_the_author(); ?></a>
+              <?php the_author() ?>
             </div>
             <time class="updated" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
         </div>

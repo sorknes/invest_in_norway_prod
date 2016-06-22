@@ -3,74 +3,172 @@
 
 // List category
 .cat-list {
-    padding: 0;
-    margin-top: $header-sm-height / 2;
-    margin-bottom: $header-sm-height / 2;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    list-style-type: none;
+  padding: 0;
+  margin-top: $header-sm-height / 2;
+  margin-bottom: $header-sm-height / 2;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
 
+  li {
+      margin: 0 5px 10px 36px;
+      display: inline-flex;
+      position: relative;
+
+      a {
+          @extend .btn;
+          @extend .btn-s;
+      }
+
+      &.cat-item {
+        &::before {
+          width: 31px;
+          height: auto;
+          position: absolute;
+          top: 0; bottom: 0; left: -31px;
+          content: '';
+          border-top: 2px solid $base-color;
+          border-bottom: 2px solid $base-color;
+          border-left: 2px solid $base-color;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: 14px 14px;
+        }
+      }
+
+      &.cat-item-43 {
+          &::before {
+              background-image: url('../images/svg/icon-fish.svg');
+          }
+      }
+
+      &.cat-item-44 {
+          &::before {
+              background-image: url('../images/svg/icon-real-estate.svg');
+          }
+      }
+
+      &.cat-item-45 {
+          &::before {
+              background-image: url('../images/svg/icon-energy.svg');
+          }
+      }
+
+      &.cat-item-46 {
+          &::before {
+              background-image: url('../images/svg/icon-tmt.svg');
+          }
+      }
+
+      &.cat-item-58 {
+          &::before {
+              background-image: url('../images/svg/icon-health.svg');
+          }
+      }
+  }
+}
+
+@mixin cat-list-item {
+  font-size: .875rem;
+}
+
+@mixin cat-item() {
+  background-size: 14px 14px !important;
+}
+
+// Category specific icons
+.category-commercial-real-estate {
+  .cat-list {
     li {
-        margin: 0 5px 10px 36px;
-        display: inline-flex;
-        position: relative;
-
-        a {
-            @extend .btn;
-            @extend .btn-s;
-        }
-
-        &.cat-item {
-
-            &::before {
-                width: 31px;
-                height: auto;
-                position: absolute;
-                top: 0; bottom: 0; left: -31px;
-                content: '';
-                border-top: 2px solid $base-color;
-                border-bottom: 2px solid $base-color;
-                border-left: 2px solid $base-color;
-                background-position: center center;
-                background-repeat: no-repeat;
-                background-size: 14px 14px;
-            }
-        }
-
-        &.cat-item-43 {
-            &::before {
-                background-image: url('../images/svg/icon-fish.svg');
-            }
-        }
-
-        &.cat-item-44, &.cat-item-48, &.cat-item-49, &.cat-item-50, &.cat-item-51, &.cat-item-52, &.cat-item-53 {
-            &::before {
-                background-image: url('../images/svg/icon-real-estate.svg');
-            }
-        }
-
-        &.cat-item-45 {
-            &::before {
-                background-image: url('../images/svg/icon-energy.svg');
-            }
-        }
-
-        &.cat-item-46 {
-            &::before {
-                background-image: url('../images/svg/icon-tmt.svg');
-            }
-        }
-
-        &.cat-item-58 {
-            &::before {
-                background-image: url('../images/svg/icon-health.svg');
-            }
-        }
+      a {
+        @include cat-list-item();
+      }
     }
+  }
+
+  .cat-item {
+    &::before {
+      background-image: url('../images/svg/icon-real-estate.svg');
+
+      @include cat-item();
+    }
+  }
+}
+
+.category-aquaculture {
+  .cat-list {
+    li {
+      a {
+        @include cat-list-item();
+      }
+    }
+  }
+
+  .cat-item {
+    &::before {
+      background-image: url('../images/svg/icon-fish.svg');
+
+      @include cat-item();
+    }
+  }
+}
+
+.category-energy-and-cleantech {
+  .cat-list {
+    li {
+      a {
+        @include cat-list-item();
+      }
+    }
+  }
+
+  .cat-item {
+    &::before {
+      background-image: url('../images/svg/icon-energy.svg');
+
+      @include cat-item();
+    }
+  }
+}
+
+.category-healthcare-and-life-sciences {
+  .cat-list {
+    li {
+      a {
+        @include cat-list-item();
+      }
+    }
+  }
+
+  .cat-item {
+    &::before {
+      background-image: url('../images/svg/icon-health.svg');
+
+      @include cat-item();
+    }
+  }
+}
+
+.category-tmt {
+  .cat-list {
+    li {
+      a {
+        @include cat-list-item();
+      }
+    }
+  }
+
+  .cat-item {
+    &::before {
+      background-image: url('../images/svg/icon-tmt.svg');
+
+      @include cat-item();
+    }
+  }
 }
 
 // Media alignment
@@ -113,6 +211,10 @@ blockquote {
 }
 
 // Thumbnails & captions
+.thumbnail {
+  margin-top: em(25px);
+}
+
 .thumbnail, .wp-caption {
     padding: 0;
     margin-bottom: em(20px);

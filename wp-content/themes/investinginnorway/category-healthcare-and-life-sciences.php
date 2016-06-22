@@ -1,6 +1,6 @@
 
 <?php
-$id = 275; //200
+$id = 287; //210
 $post = get_post($id);
 $title = apply_filters('the_title', $post->post_title);
 $content = apply_filters('the_content', $post->post_content); { ?>
@@ -37,12 +37,12 @@ $content = apply_filters('the_content', $post->post_content); { ?>
 wp_reset_query(); ?>
 
 <div class="container-fluid">
-	<main id="content" class="main" role="main">
+	<main id="content" class="main" <?php post_class('post'); ?> role="main">
     <div class="content row">
         <div class="col-xs-12 col-lg-10 col-lg-offset-1">
             <ul class="cat-list">
                 <?php wp_list_categories( array(
-                    'child_of'  => 44,
+                    'child_of'  => 43,
                     'depth' 	=> 1,
                     'title_li'  => ''
                 ) ); ?>
@@ -51,7 +51,7 @@ wp_reset_query(); ?>
     </div>
 
     <div class="content row">
-      <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+        <div class="col-xs-12 col-lg-10 col-lg-offset-1">
           <div class="grid">
               <div class="grid-sizer col-xs-2 col-sm-2 col-md-4 col-lg-3"></div>
               <?php get_template_part('loop', 'newsitems');  //Get the loop-newsitems.php ?>
