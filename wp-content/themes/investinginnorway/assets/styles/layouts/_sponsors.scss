@@ -1,5 +1,7 @@
 .entry-content {
     &.sponsor {
+      margin-top: em(20px);
+
         &.list {
             margin-bottom: em(25px);
             border-bottom: 1px solid $base-color-10;
