@@ -297,18 +297,6 @@ header {
     }
 }
 
-@media (min-width: $screen-xl-min) {
-    .navbar {
-        .well {
-            .input-group {
-                .form-control {
-                    padding: em(11px) em(10px) em(11px) em(10px);
-                }
-            }
-        }
-    }
-}
-
 // Style large nav after new breakpoint
 @media (min-width: $navbar-break) {
     .navbar {

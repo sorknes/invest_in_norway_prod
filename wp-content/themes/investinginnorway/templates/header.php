@@ -35,12 +35,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search here...">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default btn-search" type="button">Search</button>
-                                    </span>
-                                </div> <!-- /.input-group -->
+                                    <?php get_search_form(); ?>
                             </div> <!-- /.col -->
                         </div> <!-- /.row -->
                     </div> <!-- /.container -->
