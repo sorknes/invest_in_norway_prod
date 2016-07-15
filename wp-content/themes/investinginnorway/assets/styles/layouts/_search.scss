@@ -1,0 +1,22 @@
+.search {
+  article {
+    padding-bottom: em(10px);
+    border-bottom: 1px solid $base-color-50;
+  }
+
+  h2 {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .meta {
+    small {
+      margin-bottom: em(20px);
+    }
+
+    .meta-entry {
+      display: none;
+    }
+  }
+}

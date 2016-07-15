@@ -6,18 +6,18 @@
                     <h1 itemprop="headline"><?php the_title(); ?></h1>
                 </div>
                 <?php get_template_part('templates/entry-meta'); ?>
-            </div>
+            </div> <!-- /.page-header -->
         </header>
         <div id="entry" class="container" itemprop="description">
             <figure class="thumbnail">
                 <?php the_post_thumbnail('large'); ?>
-            </figure>
+            </figure> <!-- /.thumbnail -->
             <div class="entry-content">
                 <?php the_content(); ?>
-            </div>
-        </div>
+            </div> <!-- /.entry-content -->
+        </div> <!-- /.container -->
         <footer>
             <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
         </footer>
-    </article>
+    </article> <!-- /.post -->
 <?php endwhile; ?>

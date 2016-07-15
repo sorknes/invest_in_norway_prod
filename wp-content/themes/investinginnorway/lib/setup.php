@@ -94,6 +94,7 @@ function display_sidebar() {
     is_page(),
     is_single(),
     is_category(),
+    is_search()
     // is_page_template('template-custom.php'),
     // is_page_template('template-sponsor.php'),
     // is_page_template('template-contact.php'),
