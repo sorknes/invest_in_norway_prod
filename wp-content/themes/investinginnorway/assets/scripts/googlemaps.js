@@ -28,7 +28,10 @@ function initMap() {
 		position: myLatLng,
 		map: map,
 		title: 'Investing in Norway',
-		icon: iconBase + 'icon-map-marker.svg'
+		icon: {
+      url: iconBase + 'icon-map-marker.svg',
+			size: new google.maps.Size(50, 50)
+    }
 	});
 
 	google.maps.event.addDomListener(window, "resize", function() {

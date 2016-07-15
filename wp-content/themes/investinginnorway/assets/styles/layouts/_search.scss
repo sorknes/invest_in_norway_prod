@@ -13,10 +13,14 @@
   .meta {
     small {
       margin-bottom: em(20px);
-    }
 
-    .meta-entry {
-      display: none;
+      .meta-category {
+        text-align: left;
+      }
+
+      .meta-entry {
+        display: none;
+      }
     }
   }
 }
