@@ -64,16 +64,19 @@
 										</div> <!-- /.col -->
 										<div class="col-xs-12 col-sm-8">
 											<h3 itemprop="headline"><?php the_title(); ?></h3>
-												<?php
-												    $posttags = get_the_tags();
-												    if ($posttags) {
-												    	foreach($posttags as $tag) {
-															echo '<div class="meta"><small>';
-															echo 'industry: '. $tag->name .' ';
-															echo '</div></small>';
-												    	}
-												    }
-												?>
+												<div class="meta">
+													<small>
+														<?php
+															$posttags = get_the_tags();
+															echo 'Industri: ';
+															if ($posttags) {
+															  foreach($posttags as $tag) {
+															    echo $tag->name . ' / ';
+															  }
+															}
+														?>
+													</small>
+												</div>
 											<?php the_excerpt(); ?>
 										</div> <!-- /.col -->
 									</div> <!-- /.row -->
