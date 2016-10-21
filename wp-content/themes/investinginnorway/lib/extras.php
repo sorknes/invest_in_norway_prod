@@ -60,3 +60,11 @@ function jp_search_filter( $query ) {
 }
 
 add_action( 'pre_get_posts', __NAMESPACE__ . '\\jp_search_filter' );
+
+// Add lead class to first paragraph
+function first_paragraph($content){
+	return preg_replace('/<p([^>]+)?>/', '<p$1 class="lead">', $content, 1);
+}
+add_filter('the_content', __NAMESPACE__ . '\\first_paragraph');
+
+?>

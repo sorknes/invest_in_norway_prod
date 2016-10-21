@@ -70,7 +70,9 @@
 
                 .meta {
                     .category {
-                        background-image: url('../images/svg/icon-tag-grey.svg');
+                      &::before {
+                        background-image: url('../images/svg/icon-tag-grey.svg');  
+                      }
                     }
 
                     small {

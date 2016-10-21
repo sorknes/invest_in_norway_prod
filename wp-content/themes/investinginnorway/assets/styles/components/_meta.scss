@@ -6,6 +6,37 @@
 
     .meta-entry {
         margin-top: em(10px);
+
+        .author-tag {
+            position: relative;
+            display: inline-block;
+
+            &::before {
+              width: 16px;
+              height: 16px;
+              position: absolute;
+              top: 0; left: -26px;
+              content: ' ';
+              background-position: left top;
+              background-repeat: no-repeat;
+              background-image: url('../images/svg/icon-author.svg');
+              background-size: 100%;
+            }
+        }
+
+        .author-profile-pic {
+            width: 100%;
+            margin: 0 auto;
+            display: inline-block;
+
+            img {
+              width: 96px;
+              height: 96px;
+              margin: 0 0 em(10px) 0;
+              border-radius: 50%;
+              border: 2px solid white;
+            }
+        }
     }
 
     small {
@@ -19,27 +50,21 @@
         .category {
             padding: 0 0 0 em(37px);
             margin: 0 auto;
+            text-align: left;
             display: inline-block;
-            text-align: center;
-            background-position: left top;
-            background-repeat: no-repeat;
-            background-image: url('../images/svg/icon-tag.svg');
-            background-size: 12px 12px;
-        }
+            position: relative;
 
-        .updated {
-            padding-left: em(25px);
-            margin-left: em(10px);
-            border-left: 1px solid $base-color-50;
-        }
-
-        .author {
-            padding-left: em(67px);
-            display: inline-block;
-            background-position: 15px top;
-            background-repeat: no-repeat;
-            background-image: url('../images/svg/icon-author.svg');
-            background-size: 12px 12px;
+            &::before {
+              width: 16px;
+              height: 16px;
+              position: absolute;
+              top: 0; left: 0;
+              content: ' ';
+              background-position: left top;
+              background-repeat: no-repeat;
+              background-image: url('../images/svg/icon-tag.svg');
+              background-size: 100%;
+            }
         }
     }
 }

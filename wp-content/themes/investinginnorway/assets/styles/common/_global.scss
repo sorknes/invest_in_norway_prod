@@ -19,6 +19,11 @@ body {
     font-weight: $base-regular;
     line-height: $base-line-height;
     background-color: $base-color-10;
+    background-image: url('../images/svg/bg.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 // Links
@@ -47,7 +52,7 @@ h1, h2 {
 }
 
 h1 {
-    font-size: em(36px);
+    font-size: em(46px);
 }
 
 h2 {
@@ -84,6 +89,10 @@ pre {
     border-radius: 0;
     // background-color: transparent;
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+.text-left {
+  text-align: left !important;
 }
 
 @media (min-width: $screen-sm-min) {

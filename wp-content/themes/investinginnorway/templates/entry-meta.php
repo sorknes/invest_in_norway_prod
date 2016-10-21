@@ -17,11 +17,5 @@
                 }
             ?>
         </div>
-        <div class="meta-entry">
-            <div class="author">
-              <?php the_author() ?>
-            </div>
-            <time class="updated" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
-        </div>
     </small>
 </div>
