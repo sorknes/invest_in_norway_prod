@@ -1,8 +1,16 @@
+.row {
+  &.silver {
+    padding: em(40px) 0;
+    background-color: white;
+  }
+}
+
 .entry-content {
     &.sponsor {
       margin-top: em(20px);
 
         &.list {
+            padding-bottom: em(25px);
             margin-bottom: em(25px);
 
             p {
@@ -33,6 +41,23 @@
                     color: $brand-color;
                 }
             }
+
+            // .circular-logo--wrapper {
+            //   position: relative;
+            //   width: 180px;
+            //   height: 180px;
+            //   margin: 0 auto;
+            //   overflow: hidden;
+            //   border-radius: 50%;
+            //   background-color: white;
+            //   display: flex;
+            //   align-items: center;
+            //
+            //   figure {
+            //     margin: 30px auto 0 auto;
+            //     float: right;
+            //   }
+            // }
         }
 
         img {

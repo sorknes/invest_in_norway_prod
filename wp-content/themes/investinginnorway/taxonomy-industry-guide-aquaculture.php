@@ -26,7 +26,7 @@
 			<div class="col-xs-12">
 				<div class="page-header">
 					<?php
-	    			$id = 256; //192
+	    			$id = 192; //192
 	    			$post = get_post($id);
 	    			$title = apply_filters('the_title', $post->post_title);
 	    			$content = apply_filters('the_content', $post->post_content);
@@ -63,12 +63,14 @@
               <div class="entry-content sponsor list">
                 <a href="<?php the_permalink(); ?>" itemprop="url" title="Learn more about: <?php the_title(); ?>">
                   <div class="row">
-                    <div class="col-xs-12 col-sm-4">
-                      <figure title="<?php the_title(); ?>">
-                        <?php the_post_thumbnail('medium'); ?>
-                      </figure>
+                    <div class="col-xs-12 col-sm-4 col-md-3">
+                      <div class="circular-logo--wrapper">
+                        <figure title="<?php the_title(); ?>">
+                          <?php the_post_thumbnail('medium', array('class' => 'circular-logo')); ?>
+                        </figure>
+                      </div>
                     </div> <!-- /.col -->
-                    <div class="col-xs-12 col-sm-8">
+                    <div class="col-xs-12 col-sm-8 col-md-9">
                       <h3 itemprop="headline"><?php the_title(); ?></h3>
                         <div class="meta" style="text-align: left">
                           <small>
@@ -96,11 +98,11 @@
       </article> <!-- /article -->
     </div> <!-- /.content -->
 
-    <div class="content row" style="background-color: white;">
+    <div class="content row silver">
 			<div class="col-xs-12">
 				<div class="page-header">
 					<?php
-	    			$id = 259; //194
+	    			$id = 194; //194
 	    			$post = get_post($id);
 	    			$title = apply_filters('the_title', $post->post_title);
 	    			$content = apply_filters('the_content', $post->post_content);
@@ -133,29 +135,20 @@
             $loop = new WP_Query( $args );
 
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
-            <div class="col-xs-6"> <!-- entry-content sponsor list -->
+            <div class="col-xs-12 col-sm-6"> <!-- entry-content sponsor list -->
               <div class="entry-content sponsor list">
                 <a href="<?php the_permalink(); ?>" itemprop="url" title="Learn more about: <?php the_title(); ?>">
                   <div class="row">
-                    <div class="col-xs-12 col-sm-4">
-                      <figure title="<?php the_title(); ?>">
-                        <?php the_post_thumbnail('medium'); ?>
-                      </figure>
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="circular-logo--wrapper">
+                        <figure title="<?php the_title(); ?>">
+                          <?php the_post_thumbnail('medium', array('class' => 'circular-logo')); ?>
+                        </figure>
+                      </div>
                     </div> <!-- /.col -->
-                    <div class="col-xs-12 col-sm-8">
+                    <div class="col-xs-12 col-sm-6">
                       <h3 itemprop="headline"><?php the_title(); ?></h3>
                         <div class="meta" style="text-align: left">
-                          <small>
-                            <?php
-                              $posttags = get_the_tags();
-                              if ($posttags) {
-                                echo '<strong>Industry:</strong> ';
-                                foreach($posttags as $tag) {
-                                  echo $tag->name . ' / ';
-                                }
-                              }
-                            ?>
-                          </small>
                         </div>
                     </div> <!-- /.col -->
                   </div> <!-- /.row -->
@@ -173,7 +166,7 @@
 			<div class="col-xs-12">
 				<div class="page-header">
 					<?php
-	    			$id = 261; //196
+	    			$id = 196; //196
 	    			$post = get_post($id);
 	    			$title = apply_filters('the_title', $post->post_title);
 	    			$content = apply_filters('the_content', $post->post_content);
@@ -206,13 +199,13 @@
             $loop = new WP_Query( $args );
 
             while ( $loop->have_posts() ) : $loop->the_post(); ?>
-            <div class="col-xs-2"> <!-- entry-content sponsor list -->
+            <div class="col-xs-6 col-sm-2"> <!-- entry-content sponsor list -->
               <div class="entry-content sponsor list">
                 <a href="<?php the_permalink(); ?>" itemprop="url" title="Learn more about: <?php the_title(); ?>">
                   <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-xs-12 circular-logo--wrapper">
                       <figure title="<?php the_title(); ?>">
-                        <?php the_post_thumbnail('medium'); ?>
+                        <?php the_post_thumbnail('medium', array('class' => 'circular-logo')); ?>
                       </figure>
                     </div> <!-- /.col -->
                   </div> <!-- /.row -->

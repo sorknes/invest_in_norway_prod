@@ -55,6 +55,28 @@
             }
         }
     }
+
+    &.author {
+      width: 100%;
+
+      .meta-entry {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: em(30px);
+      }
+    }
+}
+
+.authors-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: inline-block;
+
+  li {
+    margin-bottom: 40px;
+    text-align: left;
+  }
 }
 
 .grid-item {

@@ -1,6 +1,5 @@
-
 <?php
-$id = 284; //207
+$id = 207; //207
 $post = get_post($id);
 $title = apply_filters('the_title', $post->post_title);
 $content = apply_filters('the_content', $post->post_content); { ?>

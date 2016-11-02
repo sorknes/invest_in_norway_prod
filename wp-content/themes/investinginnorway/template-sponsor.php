@@ -23,7 +23,7 @@
 			<div class="col-xs-12">
 				<div class="page-header">
 					<?php
-	    			$id = 256; //192
+	    			$id = 192; //192
 	    			$post = get_post($id);
 	    			$title = apply_filters('the_title', $post->post_title);
 	    			$content = apply_filters('the_content', $post->post_content);
@@ -94,7 +94,7 @@
 			<div class="col-xs-12">
 				<div class="page-header">
 					<?php
-	    			$id = 259; //194
+	    			$id = 194; //194
 	    			$post = get_post($id);
 	    			$title = apply_filters('the_title', $post->post_title);
 	    			$content = apply_filters('the_content', $post->post_content);
@@ -165,7 +165,7 @@
 			<div class="col-xs-12">
 				<div class="page-header">
 					<?php
-	    			$id = 261; //196
+	    			$id = 196; //196
 	    			$post = get_post($id);
 	    			$title = apply_filters('the_title', $post->post_title);
 	    			$content = apply_filters('the_content', $post->post_content);

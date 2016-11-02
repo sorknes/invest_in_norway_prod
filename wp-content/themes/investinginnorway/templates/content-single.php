@@ -18,19 +18,23 @@
                 <?php the_post_thumbnail('large'); ?>
             </figure> <!-- /.thumbnail -->
             <div class="entry-content post">
-                <div class="col-sm-3">
-                  <div class="meta">
+                <div class="col-xs-12 col-sm-3">
+                  <div class="meta author">
                       <div class="meta-entry">
-                          <div class="author-profile-pic">
+                          <!-- <div class="author-profile-pic">
                             <?php echo get_wp_user_avatar(get_the_author_meta('ID'), 96); ?>
                           </div>
                           <div class="author-tag">
                             <small>Author: <?php the_author() ?></small>
+                          </div> -->
+
+                          <div class="author-tag">
+                            <small>Author(s): <br /> <?php if ( function_exists( 'coauthors' ) ) { coauthors(); } else { the_author(); } ?></small>
                           </div>
                       </div>
                   </div>
                 </div>
-                <div class="col-sm-9">
+                <div class="col-xs-12 col-sm-9">
                     <?php the_content(); ?>
                 </div>
             </div> <!-- /.entry-content -->
