@@ -5,7 +5,7 @@
                 <div class="entry-title">
                     <div class="meta">
                       <div class="entry-meta">
-                        <small>Publisert: <time datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time></small>
+                        <small>Published: <time datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time></small>
                       </div>
                     </div>
                     <h1 itemprop="headline"><?php the_title(); ?></h1>
@@ -25,7 +25,7 @@
                             <?php echo get_wp_user_avatar(get_the_author_meta('ID'), 96); ?>
                           </div>
                           <div class="author-tag">
-                            <small>Forfatter: <?php the_author() ?></small>
+                            <small>Author: <?php the_author() ?></small>
                           </div>
                       </div>
                   </div>

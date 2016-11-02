@@ -1,0 +1,66 @@
+.wpcf7-form {
+  padding: em(20px);
+  color: white;
+  background-color: $brand-color;
+
+  @media (min-width: $screen-sm-min) {
+    padding: em(40px);
+  }
+
+  label {
+    width: 100%;
+    font-weight: normal;
+  }
+
+  input[type=text],
+  input[type=email] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+  }
+
+  input[type=submit] {
+    padding: em(13px) em(40px) em(10px);
+    margin-top: em(40px);
+    color: white;
+    font-size: .875em;
+    font-family: $header-font-family;
+    font-weight: normal;
+    text-transform: uppercase;
+    border: none;
+    background-color: $base-color;
+  }
+
+  .wpcf7-response-output {
+    margin: em(20px) 0 0 0;
+  }
+
+  .wpcf7-mail-sent-ok {
+    color: white;
+    text-align: center;
+    border: none;
+    background-color: $accent-color;
+  }
+}
+
+.download-icon {
+  padding: em(13px) em(40px) em(10px);
+  margin: 20px 0 0 0;
+  color: white;
+  font-family: $header-font-family;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  background-color: $accent-color;
+
+  &::before {
+    content: 'Download: ';
+
+  }
+
+  &:hover, &:focus {
+    color: white;
+    background-color: $base-color;
+  }
+}
